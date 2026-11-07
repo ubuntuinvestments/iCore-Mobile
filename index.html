@@ -1,125 +1,661 @@
+
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iCore Mobile – Sealed & Pre-Owned iPhones</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#120a2e;--bg2:#1c1050;--ink:#fff;--mut:#c9c1ee;--gold:#ffc43d;--orange:#ff7a1a;--pink:#ff3d9a;--blue:#2f8cff;--teal:#19e3c1;--violet:#8a4dff;--card:rgba(255,255,255,.08);--line:rgba(255,255,255,.16);
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Figtree,system-ui,sans-serif;color-scheme:dark;overflow-x:hidden}
-h1,h2,h3{font-family:Unbounded,Figtree,sans-serif;margin:0;line-height:1.1}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:20;background:rgba(18,10,46,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-nav img{height:38px;border-radius:8px}
-nav .links{display:flex;gap:22px;font-weight:600;font-size:15px}
-nav .links a:hover{color:var(--gold)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;border:0;cursor:pointer;font-size:16px;font-family:inherit}
-.btn.wa{background:linear-gradient(135deg,#25d366,#14b8a6);color:#04210f}
-.btn.ghost{border:2px solid var(--line);color:#fff;background:transparent}
-.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-.hero{position:relative;overflow:hidden;padding:56px 0 70px;background:radial-gradient(900px 500px at 85% 10%,#ff3d9a55,transparent 60%),radial-gradient(800px 500px at 0% 90%,#2f8cff66,transparent 60%),radial-gradient(700px 400px at 60% 100%,#ff7a1a55,transparent 60%),var(--bg)}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-.hero h1{font-size:clamp(34px,5.6vw,64px);font-weight:800}
-.grad{background:linear-gradient(90deg,var(--gold),var(--orange),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{font-size:19px;color:var(--mut);max-width:48ch;margin:18px 0 26px}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-.hero img.ph{width:100%;border-radius:28px;border:2px solid var(--gold);box-shadow:0 0 60px #8a4dff88}
-.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.badges span{background:var(--card);border:1px solid var(--line);padding:8px 14px;border-radius:999px;font-size:14px;font-weight:600}
-section{padding:72px 0}
-h2{font-size:clamp(26px,4vw,40px);margin-bottom:10px}
-.sub{color:var(--mut);margin:0 0 28px;max-width:60ch}
-.band{background:linear-gradient(135deg,#2a1478,#5b21b6 45%,#c2185b)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.chip{background:var(--card);color:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-weight:700;cursor:pointer;font-family:inherit;font-size:15px}
-.chip[aria-pressed=true]{background:linear-gradient(135deg,var(--gold),var(--orange));color:#2a1200;border-color:transparent}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
-.card{border-radius:20px;padding:20px;background:var(--card);border:1px solid var(--line);border-top:5px solid var(--c)}
-.card h3{font-size:18px;margin-bottom:12px}
-.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-top:1px dashed var(--line);font-size:15px}
-.row b{background:var(--c);color:#150a30;padding:4px 12px;border-radius:999px;font-weight:800;white-space:nowrap}
-.row small{color:var(--mut);display:block;font-size:13px}
-.note{color:var(--mut);font-size:14px;margin-top:18px}
-.media{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.media figure{margin:0;border-radius:22px;overflow:hidden;border:2px solid var(--line);background:#000}
-.media img,.media video{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5}
-.media figure:nth-child(1){border-color:var(--orange)}.media figure:nth-child(2){border-color:var(--blue)}.media figure:nth-child(3){border-color:var(--violet)}.media figure:nth-child(4){border-color:var(--teal)}.media figure:nth-child(5){border-color:var(--pink)}.media figure:nth-child(6){border-color:var(--gold)}
-.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.why div{border-radius:20px;padding:22px;color:#150a30}
-.why h3{font-size:17px;margin-bottom:8px}.why p{margin:0;font-weight:600}
-.free{margin-top:24px;background:linear-gradient(90deg,var(--gold),var(--orange));color:#2a1200;border-radius:18px;padding:16px 20px;font-weight:800;text-align:center}
-.contact{text-align:center}
-.contact .num{font-family:Unbounded,sans-serif;font-size:clamp(30px,6vw,56px);font-weight:800;display:block;margin:12px 0 22px}
-.contact .cta{justify-content:center}
-footer{padding:26px 0 40px;text-align:center;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
-@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.media{grid-template-columns:1fr 1fr}nav .links{display:none}.hero img.ph{max-width:420px;margin:0 auto}}
-@media(prefers-reduced-motion:no-preference){.hero img.ph{animation:fl 6s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-10px)}}}
-</style></head><body>
-<nav><div class="wrap"><a href="#top"><img src="images/logo.jpg" alt="iCore Mobile"></a>
-<div class="links"><a href="#prices">Prices</a><a href="#stock">Our stock</a><a href="#why">Why iCore</a><a href="#contact">Contact</a></div>
-<a class="btn wa" href="https://wa.me/27691855977" style="padding:9px 16px;font-size:14px">WhatsApp us</a></div></nav>
+:root {
+--bg:#080b18;
+--ink:#fff;
+--mut:#c7cbe0;
+--gold:#f5c96a;
+--violet:#9b7bff;
+--card:rgba(255,255,255,.075);
+--line:rgba(190,180,255,.18);
+}
 
-<header class="hero" id="top"><div class="wrap">
-<div><h1>Your iPhone,<br><span class="grad">our priority.</span></h1>
+* {box-sizing:border-box}
+
+html {scroll-behavior:smooth;scroll-padding-top:70px}
+
+body {
+margin:0;
+background:linear-gradient(135deg,#080b18,#11152b,#17102d);
+color:var(--ink);
+font:16px/1.55 Figtree,sans-serif;
+overflow-x:hidden;
+}
+
+h1,h2,h3 {
+font-family:Unbounded,sans-serif;
+margin:0;
+line-height:1.2;
+}
+
+a {color:inherit;text-decoration:none}
+
+.wrap {
+max-width:1120px;
+margin:auto;
+padding:0 20px;
+}
+
+nav {
+position:sticky;
+top:0;
+z-index:20;
+background:rgba(8,11,24,.95);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);
+}
+
+nav .wrap {
+display:flex;
+align-items:center;
+justify-content:space-between;
+height:65px;
+}
+
+nav img {height:38px;border-radius:8px}
+
+nav .links {
+display:flex;
+gap:20px;
+font-weight:700;
+}
+
+nav .links a:hover {color:var(--gold)}
+
+.btn {
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:13px 22px;
+border-radius:999px;
+font-weight:700;
+border:0;
+cursor:pointer;
+font-size:15px;
+}
+
+.btn.wa,.buy-mini {
+background:linear-gradient(135deg,#25d366,#14b8a6);
+color:#04210f;
+}
+
+.btn.ghost {
+border:2px solid var(--line);
+background:transparent;
+color:white;
+}
+
+.hero {
+padding:65px 0;
+background:
+radial-gradient(circle at 85% 10%,#9b7bff55,transparent 40%),
+radial-gradient(circle at 5% 90%,#2563eb44,transparent 40%);
+}
+
+.hero .wrap {
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:30px;
+align-items:center;
+}
+
+.hero h1 {font-size:clamp(34px,5.6vw,64px)}
+
+.grad {
+background:linear-gradient(90deg,var(--gold),#ff9b54,#c084fc);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.hero p {
+font-size:19px;
+color:var(--mut);
+margin:20px 0 25px;
+}
+
+.hero img.ph {
+width:100%;
+border-radius:25px;
+border:2px solid var(--violet);
+box-shadow:0 0 50px #9b7bff66;
+}
+
+.cta {
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.badges {
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:25px;
+}
+
+.badges span {
+background:var(--card);
+border:1px solid var(--line);
+padding:8px 13px;
+border-radius:30px;
+font-size:13px;
+}
+
+section {padding:65px 0}
+
+h2 {
+font-size:clamp(25px,4vw,38px);
+margin-bottom:12px;
+}
+
+.sub {
+color:var(--mut);
+margin-bottom:28px;
+}
+
+.band {
+background:linear-gradient(135deg,#11152b,#292052,#172b4d);
+}
+
+.chips {
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:24px;
+}
+
+.chip {
+background:var(--card);
+color:white;
+border:1px solid var(--line);
+padding:9px 15px;
+border-radius:30px;
+font-weight:700;
+cursor:pointer;
+}
+
+.chip[aria-pressed=true] {
+background:linear-gradient(135deg,var(--gold),#ff9b54);
+color:#150a30;
+}
+
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+gap:16px;
+}
+
+.card {
+border-radius:20px;
+padding:20px;
+background:var(--card);
+border:1px solid var(--line);
+border-top:5px solid var(--c);
+}
+
+.card h3 {
+font-size:18px;
+margin-bottom:12px;
+}
+
+.row {
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:10px;
+padding:12px 0;
+border-top:1px dashed var(--line);
+font-size:14px;
+}
+
+.row b {
+background:var(--c);
+color:#150a30;
+padding:5px 10px;
+border-radius:30px;
+white-space:nowrap;
+}
+
+.buy-mini {
+display:inline-flex;
+padding:8px 12px;
+border-radius:30px;
+font-size:12px;
+font-weight:800;
+white-space:nowrap;
+}
+
+.note {
+color:var(--mut);
+font-size:14px;
+margin-top:20px;
+}
+
+.media {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+}
+
+.media figure {
+margin:0;
+border-radius:20px;
+overflow:hidden;
+border:2px solid var(--line);
+background:#000;
+}
+
+.media img,.media video {
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+aspect-ratio:4/5;
+}
+
+.payment-card {
+max-width:650px;
+margin:28px auto 0;
+padding:28px;
+border:1px solid var(--line);
+border-radius:24px;
+background:linear-gradient(145deg,#9b7bff25,#ffffff0d);
+box-shadow:0 20px 70px #0005;
+}
+
+.bank-row {
+display:flex;
+justify-content:space-between;
+gap:18px;
+padding:14px 0;
+border-bottom:1px solid var(--line);
+}
+
+.bank-row span {color:var(--mut)}
+
+.payment-note {
+color:var(--mut);
+font-size:14px;
+margin:20px 0;
+}
+
+.why {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:16px;
+}
+
+.why div {
+border-radius:20px;
+padding:22px;
+color:#150a30;
+}
+
+.why h3 {
+font-size:17px;
+margin-bottom:8px;
+}
+
+.why p {margin:0;font-weight:600}
+
+.free {
+margin-top:24px;
+background:linear-gradient(90deg,var(--gold),#ff9b54);
+color:#2a1200;
+border-radius:18px;
+padding:16px;
+font-weight:800;
+text-align:center;
+}
+
+.contact {text-align:center}
+
+.contact .num {
+font-family:Unbounded,sans-serif;
+font-size:clamp(30px,6vw,56px);
+font-weight:800;
+display:block;
+margin:15px 0 22px;
+}
+
+.contact .cta {justify-content:center}
+
+footer {
+padding:26px 0 40px;
+text-align:center;
+color:var(--mut);
+font-size:14px;
+border-top:1px solid var(--line);
+}
+
+@media(max-width:820px) {
+.hero .wrap {grid-template-columns:1fr}
+.media {grid-template-columns:1fr 1fr}
+nav .links {display:none}
+.hero img.ph {max-width:420px;margin:auto}
+}
+
+@media(max-width:520px) {
+.payment-card {padding:20px}
+.bank-row {flex-direction:column;gap:4px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="wrap">
+<a href="#top"><img src="images/logo.jpg" alt="iCore Mobile"></a>
+
+<div class="links">
+<a href="#prices">Prices</a>
+<a href="#stock">Our stock</a>
+<a href="#payment">Bank details</a>
+<a href="#why">Why iCore</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a class="btn wa" href="https://wa.me/27691855977">WhatsApp us</a>
+</div>
+</nav>
+
+<header class="hero" id="top">
+<div class="wrap">
+
+<div>
+<h1>Your iPhone,<br><span class="grad">our priority.</span></h1>
+
 <p>Sealed and pre-owned iPhones from the iPhone 8 to the iPhone 17 Pro Max. 100% original Apple, tested and warrantied, delivered nationwide.</p>
-<div class="cta"><a class="btn wa" href="https://wa.me/27691855977">Chat on WhatsApp</a><a class="btn ghost" href="#prices">See prices</a></div>
-<div class="badges"><span>100% original Apple</span><span>Warranty included</span><span>Trade-ins welcome</span><span>Nationwide delivery</span></div></div>
+
+<div class="cta">
+<a class="btn wa" href="https://wa.me/27691855977">Chat on WhatsApp</a>
+<a class="btn ghost" href="#prices">See prices</a>
+</div>
+
+<div class="badges">
+<span>100% original Apple</span>
+<span>Warranty included</span>
+<span>Trade-ins welcome</span>
+<span>Nationwide delivery</span>
+</div>
+</div>
+
 <img class="ph" src="images/hero.jpg" alt="iPhones in purple and silver">
-</div></header>
 
-<section id="prices" class="band"><div class="wrap">
-<h2>iPhone prices</h2><p class="sub">Pick a model to see storage sizes and prices. Prices are in rand.</p>
-<div class="chips" id="chips" role="group" aria-label="Filter by model"></div>
+</div>
+</header>
+
+<section id="prices" class="band">
+<div class="wrap">
+
+<h2>iPhone prices</h2>
+<p class="sub">Pick a model to see storage sizes and prices. Prices are in rand.</p>
+
+<div class="chips" id="chips"></div>
 <div class="grid" id="grid"></div>
-<p class="note">Stock changes daily. Message us on WhatsApp to confirm what’s available right now.</p>
-<div class="free">Every purchase includes a free charger, screen protector and cover.</div>
-</div></section>
 
-<section id="stock"><div class="wrap">
-<h2>Take a look at our stock</h2><p class="sub">Boxes on the shelves, phones in the box. This is what you’re buying from.</p>
+<p class="note">Stock changes daily. Message us on WhatsApp to confirm availability.</p>
+
+<div class="free">
+Every purchase includes a free charger, screen protector and cover.
+</div>
+
+</div>
+</section>
+
+<section id="stock">
+<div class="wrap">
+
+<h2>Take a look at our stock</h2>
+<p class="sub">Boxes on the shelves, phones in the box. This is what you're buying from.</p>
+
 <div class="media">
-<figure><video src="video/stock-video.mp4" autoplay muted loop playsinline aria-label="iPhone Pro models unboxed"></video></figure>
-<figure><img src="images/shelf-1.jpg" alt="Shelves of sealed iPhones in orange, blue and silver" loading="lazy"></figure>
-<figure><img src="images/shelf-3.jpg" alt="Wall of iPhone boxes" loading="lazy"></figure>
-<figure><img src="images/shelf-2.jpg" alt="Stacked iPhone boxes on wooden shelves" loading="lazy"></figure>
-<figure><img src="images/phone-1.jpg" alt="Blue iPhone 16 Plus in hand" loading="lazy"></figure>
-<figure><img src="images/phone-2.jpg" alt="Two sealed gold iPhone 11 Pro boxes" loading="lazy"></figure>
-</div></div></section>
 
-<section id="why" style="background:#0d0623"><div class="wrap">
-<h2>Why buy from iCore</h2><p class="sub">Every phone is checked before it reaches you.</p>
+<figure>
+<video src="video/stock-video.mp4" autoplay muted loop playsinline></video>
+</figure>
+
+<figure><img src="images/shelf-1.jpg" alt="iPhone stock" loading="lazy"></figure>
+<figure><img src="images/shelf-3.jpg" alt="iPhone boxes" loading="lazy"></figure>
+<figure><img src="images/shelf-2.jpg" alt="iPhone stock" loading="lazy"></figure>
+<figure><img src="images/phone-1.jpg" alt="iPhone" loading="lazy"></figure>
+<figure><img src="images/phone-2.jpg" alt="iPhone" loading="lazy"></figure>
+
+</div>
+</div>
+</section>
+
+<section id="payment">
+<div class="wrap">
+
+<h2>Bank details &amp; payment</h2>
+<p class="sub">Please use these account details when making your iCore Mobile payment.</p>
+
+<div class="payment-card">
+
+<h3 style="font-size:21px;margin-bottom:18px">
+iCore Mobile banking details
+</h3>
+
+<div class="bank-row">
+<span>Bank</span>
+<strong>Standard Bank</strong>
+</div>
+
+<div class="bank-row">
+<span>Account type</span>
+<strong>Current Account</strong>
+</div>
+
+<div class="bank-row">
+<span>Account number</span>
+<strong>10282509974</strong>
+</div>
+
+<p class="payment-note">
+After making payment, send your proof of payment (POP) directly to iCore Mobile on WhatsApp. Please include your name and the iPhone model you ordered. Confirm the account details with us on WhatsApp before transferring money.
+</p>
+
+<a class="btn wa" href="https://wa.me/27691855977?text=Hello%20iCore%20Mobile%2C%20I%20have%20made%20payment.%20I%20am%20sending%20my%20proof%20of%20payment.%20Please%20confirm%20receipt." target="_blank" rel="noopener">
+Send proof of payment on WhatsApp
+</a>
+
+</div>
+</div>
+</section>
+
+<section id="why" style="background:#0d1020">
+<div class="wrap">
+
+<h2>Why buy from iCore</h2>
+<p class="sub">Every phone is checked before it reaches you.</p>
+
 <div class="why">
-<div style="background:var(--gold)"><h3>IMEI checked</h3><p>100% genuine devices.</p></div>
-<div style="background:var(--teal)"><h3>Fully tested</h3><p>Performance and battery health checked.</p></div>
-<div style="background:var(--pink)"><h3>Warranty available</h3><p>Terms apply.</p></div>
-<div style="background:var(--blue)"><h3>Safe delivery</h3><p>Secure transactions, nationwide delivery.</p></div>
-<div style="background:var(--orange)"><h3>Trade-ins welcome</h3><p>Upgrade your world with the phone you have now.</p></div>
-</div></div></section>
 
-<section id="contact" class="contact band"><div class="wrap">
-<h2>Ready to upgrade?</h2><p class="sub" style="margin-inline:auto">WhatsApp, call or send an enquiry. We reply fast.</p>
+<div style="background:var(--gold)">
+<h3>IMEI checked</h3>
+<p>100% genuine devices.</p>
+</div>
+
+<div style="background:var(--teal)">
+<h3>Fully tested</h3>
+<p>Performance and battery health checked.</p>
+</div>
+
+<div style="background:var(--pink)">
+<h3>Warranty available</h3>
+<p>Terms apply.</p>
+</div>
+
+<div style="background:var(--blue)">
+<h3>Safe delivery</h3>
+<p>Secure transactions, nationwide delivery.</p>
+</div>
+
+<div style="background:var(--orange)">
+<h3>Trade-ins welcome</h3>
+<p>Upgrade your world with the phone you have now.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact band">
+<div class="wrap">
+
+<h2>Ready to upgrade?</h2>
+<p class="sub" style="margin-inline:auto">WhatsApp, call or send an enquiry. We reply fast.</p>
+
 <a class="num grad" href="tel:+27691855977">069 185 5977</a>
-<div class="cta"><a class="btn wa" href="https://wa.me/27691855977">WhatsApp</a><a class="btn ghost" href="tel:+27691855977">Call now</a></div>
-</div></section>
-<footer>© iCore Mobile. Apple, sales, service, trust. Sealed. Pre-owned. Affordable.</footer>
+
+<div class="cta">
+<a class="btn wa" href="https://wa.me/27691855977">WhatsApp</a>
+<a class="btn ghost" href="tel:+27691855977">Call now</a>
+<a class="btn ghost" href="#payment">Bank details &amp; POP</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+© iCore Mobile. Apple, sales, service, trust. Sealed. Pre-owned. Affordable.
+</footer>
 
 <script>
-var D=[["iPhone 8","#ff3d9a",[["iPhone 8 64GB",2700],["iPhone 8 Plus 64GB",3400]]],
-["iPhone XR / XS","#2f8cff",[["iPhone XR 64GB",3499],["iPhone XR 128GB",4499],["iPhone XS Max 64GB",5400]]],
-["iPhone 11","#8a4dff",[["iPhone 11 64GB",4500],["iPhone 11 128GB",5400],["iPhone 11 Pro 64GB",5499],["iPhone 11 Pro 256GB",6699],["iPhone 11 Pro Max 256GB",7199]]],
-["iPhone 12","#19e3c1",[["iPhone 12 64GB",5499],["iPhone 12 128GB",6599],["iPhone 12 Pro 128GB",7499],["iPhone 12 Pro Max 128GB",9599],["iPhone 12 Pro Max 256GB",10199]]],
-["iPhone 13","#ff7a1a",[["iPhone 13 128GB",7499],["iPhone 13 256GB",8499],["iPhone 13 Pro Max 128GB",9499],["iPhone 13 Pro Max 256GB",11499]]],
-["iPhone 14","#ffc43d",[["iPhone 14 128GB",9299],["iPhone 14 Pro 128GB",12399],["iPhone 14 Pro Max 128GB",14999]]],
-["iPhone 15","#ff3d9a",[["iPhone 15 128GB",15000],["iPhone 15 256GB",17999],["iPhone 15 Pro Max 256GB",19999]]],
-["iPhone 16","#2f8cff",[["iPhone 16 128GB",13999],["iPhone 16 Pro Max 256GB",18999]]],
-["iPhone 17","#19e3c1",[["iPhone 17 128GB",17399],["iPhone 17 Pro 128GB",22399],["iPhone 17 Pro Max 256GB",28499]]]];
-var f=function(n){return "R"+String(n).replace(/\B(?=(\d{3})+$)/g," ")};
-var chips=document.getElementById("chips"),grid=document.getElementById("grid"),cur="All";
-function draw(){chips.innerHTML="";["All"].concat(D.map(function(d){return d[0]})).forEach(function(n){var b=document.createElement("button");b.className="chip";b.textContent=n;b.setAttribute("aria-pressed",n===cur);b.onclick=function(){cur=n;draw()};chips.appendChild(b)});
-grid.innerHTML=D.filter(function(d){return cur==="All"||d[0]===cur}).map(function(d){return '<div class="card" style="--c:'+d[1]+'"><h3>'+d[0]+'</h3>'+d[2].map(function(r){return '<div class="row"><span>'+r[0]+'</span><b>'+f(r[1])+'</b></div>'}).join("")+'</div>'}).join("")}
+
+var D = [
+["iPhone 8","#c084fc",[
+["iPhone 8 64GB",2700],
+["iPhone 8 Plus 64GB",3400]
+]],
+
+["iPhone XR / XS","#6ea8ff",[
+["iPhone XR 64GB",3499],
+["iPhone XR 128GB",4499],
+["iPhone XS Max 64GB",5400]
+]],
+
+["iPhone 11","#9b7bff",[
+["iPhone 11 64GB",4500],
+["iPhone 11 128GB",5400],
+["iPhone 11 Pro 64GB",5499],
+["iPhone 11 Pro 256GB",6699],
+["iPhone 11 Pro Max 256GB",7199]
+]],
+
+["iPhone 12","#5eead4",[
+["iPhone 12 64GB",5499],
+["iPhone 12 128GB",6599],
+["iPhone 12 Pro 128GB",7499],
+["iPhone 12 Pro Max 128GB",9599],
+["iPhone 12 Pro Max 256GB",10199]
+]],
+
+["iPhone 13","#ff9b54",[
+["iPhone 13 128GB",7499],
+["iPhone 13 256GB",8499],
+["iPhone 13 Pro Max 128GB",9499],
+["iPhone 13 Pro Max 256GB",11499]
+]],
+
+["iPhone 14","#f5c96a",[
+["iPhone 14 128GB",9299],
+["iPhone 14 Pro 128GB",12399],
+["iPhone 14 Pro Max 128GB",14999]
+]],
+
+["iPhone 15","#c084fc",[
+["iPhone 15 128GB",15000],
+["iPhone 15 256GB",17999],
+["iPhone 15 Pro Max 256GB",19999]
+]],
+
+["iPhone 16","#6ea8ff",[
+["iPhone 16 128GB",13999],
+["iPhone 16 Pro Max 256GB",18999]
+]],
+
+["iPhone 17","#5eead4",[
+["iPhone 17 128GB",17399],
+["iPhone 17 Pro 128GB",22399],
+["iPhone 17 Pro Max 256GB",28499]
+]]
+];
+
+function money(n) {
+return "R" + String(n).replace(/\B(?=(\d{3})+$)/g," ");
+}
+
+var chips = document.getElementById("chips");
+var grid = document.getElementById("grid");
+var current = "All";
+
+function draw() {
+
+chips.innerHTML = "";
+
+["All"].concat(D.map(function(item) {
+return item[0];
+})).forEach(function(name) {
+
+var button = document.createElement("button");
+button.className = "chip";
+button.textContent = name;
+button.setAttribute("aria-pressed",name === current);
+
+button.onclick = function() {
+current = name;
 draw();
-</script></body></html>
+};
+
+chips.appendChild(button);
+});
+
+grid.innerHTML = D.filter(function(item) {
+return current === "All" || item[0] === current;
+}).map(function(item) {
+
+return '<div class="card" style="--c:'+item[1]+'">' +
+'<h3>'+item[0]+'</h3>' +
+
+item[2].map(function(phone) {
+
+var message = "Hello iCore Mobile, I would like to buy " +
+phone[0] + " for " + money(phone[1]) +
+". Please confirm availability and send me the payment details. I will send my proof of payment to this WhatsApp number after payment.";
+
+var whatsapp = "https://wa.me/27691855977?text=" +
+encodeURIComponent(message);
+
+return '<div class="row">' +
+'<span>'+phone[0]+'</span>' +
+'<b>'+money(phone[1])+'</b>' +
+'<a class="buy-mini" href="'+whatsapp+'" target="_blank" rel="noopener">BUY NOW</a>' +
+'</div>';
+
+}).join("") +
+
+'</div>';
+
+}).join("");
+}
+
+draw();
+
+</script>
+</body>
+</html>
